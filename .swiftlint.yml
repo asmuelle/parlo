@@ -1,0 +1,29 @@
+# Parlo swiftlint configuration (M0). CI installs swiftlint; locally the
+# `just lint` recipe skips gracefully when the tool is absent.
+included:
+  - App
+  - AppTests
+  - Packages
+excluded:
+  - .build
+  - Packages/**/.build
+  - DerivedData
+
+line_length:
+  warning: 140
+  error: 200
+
+identifier_name:
+  min_length: 2
+  excluded: [i, x, y]
+
+function_body_length:
+  warning: 50
+  error: 80
+
+file_length:
+  warning: 800
+  error: 1000
+
+nesting:
+  type_level: 2

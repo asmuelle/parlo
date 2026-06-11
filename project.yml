@@ -1,0 +1,60 @@
+# XcodeGen spec for the Parlo app shell (M0). The domain lives in the local
+# SPM package at the repo root (Package.swift); this target only composes it.
+name: Parlo
+options:
+  bundleIdPrefix: dev.parlo
+  deploymentTarget:
+    iOS: "26.0"
+  createIntermediateGroups: true
+
+packages:
+  ParloPackages:
+    path: .
+
+settings:
+  base:
+    SWIFT_VERSION: "6.0"
+    SWIFT_STRICT_CONCURRENCY: complete
+    CODE_SIGNING_ALLOWED: "NO"
+    TARGETED_DEVICE_FAMILY: "1"
+
+targets:
+  Parlo:
+    type: application
+    platform: iOS
+    sources: [App]
+    dependencies:
+      - package: ParloPackages
+        products:
+          - ParloKit
+          - ConversationEngine
+          - SpeechKit
+          - PronunciationBeta
+          - Persistence
+          - Paywall
+          - DesignSystem
+    info:
+      path: App/Info.plist
+      properties:
+        CFBundleDisplayName: Parlo
+        UILaunchScreen: {}
+        NSMicrophoneUsageDescription: >-
+          Parlo listens to your speech entirely on this device. Audio never
+          leaves your phone.
+
+  ParloTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources: [AppTests]
+    dependencies:
+      - target: Parlo
+
+schemes:
+  Parlo:
+    build:
+      targets:
+        Parlo: all
+        ParloTests: [test]
+    test:
+      targets:
+        - ParloTests

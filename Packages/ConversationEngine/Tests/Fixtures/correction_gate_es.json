@@ -1,0 +1,198 @@
+{
+  "language": "es",
+  "note": "M1 seed of the Spanish golden set (M2 grows this to ~200 native-speaker-reviewed cases). Expected values: shown | suppressed:<reason>.",
+  "cases": [
+    {
+      "name": "register upgrade quiero->quisiera",
+      "utterance": "quiero un cafe por favor",
+      "original": "quiero",
+      "corrected": "quisiera",
+      "category": "register",
+      "expected": "shown"
+    },
+    {
+      "name": "missing accent cafe->café",
+      "utterance": "quiero un cafe",
+      "original": "cafe",
+      "corrected": "café",
+      "category": "vocab",
+      "expected": "shown"
+    },
+    {
+      "name": "gender agreement el leche->la leche",
+      "utterance": "el leche esta caliente",
+      "original": "el leche",
+      "corrected": "la leche",
+      "category": "grammar",
+      "expected": "shown"
+    },
+    {
+      "name": "anglicism puedo tener->me pone",
+      "utterance": "puedo tener una tostada",
+      "original": "puedo tener",
+      "corrected": "me pone",
+      "category": "register",
+      "expected": "shown"
+    },
+    {
+      "name": "broken verb phrase soy querer->quiero",
+      "utterance": "yo soy querer un te",
+      "original": "soy querer",
+      "corrected": "quiero",
+      "category": "grammar",
+      "expected": "shown"
+    },
+    {
+      "name": "accent restoration with grammar category is allowed",
+      "utterance": "donde esta el banco",
+      "original": "donde esta",
+      "corrected": "dónde está",
+      "category": "grammar",
+      "expected": "shown"
+    },
+    {
+      "name": "multiword polite request",
+      "utterance": "puedo pagar con tarjeta si o no",
+      "original": "si o no",
+      "corrected": "verdad",
+      "category": "register",
+      "expected": "shown"
+    },
+    {
+      "name": "punctuation-insensitive containment",
+      "utterance": "¡Quiero un café!",
+      "original": "quiero",
+      "corrected": "quisiera",
+      "category": "register",
+      "expected": "shown"
+    },
+    {
+      "name": "identical correction",
+      "utterance": "un café con leche",
+      "original": "un café con leche",
+      "corrected": "un café con leche",
+      "category": "vocab",
+      "expected": "suppressed:no-change"
+    },
+    {
+      "name": "case-only difference",
+      "utterance": "quiero un cafe",
+      "original": "Quiero",
+      "corrected": "quiero",
+      "category": "grammar",
+      "expected": "suppressed:no-change"
+    },
+    {
+      "name": "whitespace-only difference",
+      "utterance": "quiero un cafe",
+      "original": "un cafe",
+      "corrected": "un  cafe",
+      "category": "grammar",
+      "expected": "suppressed:no-change"
+    },
+    {
+      "name": "hallucinated span not in utterance",
+      "utterance": "quisiera una tostada",
+      "original": "quiero",
+      "corrected": "quisiera",
+      "category": "register",
+      "expected": "suppressed:original-span-not-in-utterance"
+    },
+    {
+      "name": "empty original span",
+      "utterance": "quisiera una tostada",
+      "original": "",
+      "corrected": "quisiera",
+      "category": "register",
+      "expected": "suppressed:original-span-not-in-utterance"
+    },
+    {
+      "name": "empty corrected span",
+      "utterance": "quiero un cafe",
+      "original": "quiero",
+      "corrected": "",
+      "category": "vocab",
+      "expected": "suppressed:empty-correction"
+    },
+    {
+      "name": "english correction leaks through",
+      "utterance": "quiero un cafe",
+      "original": "quiero",
+      "corrected": "I would like",
+      "category": "register",
+      "expected": "suppressed:english-content"
+    },
+    {
+      "name": "single english stopword",
+      "utterance": "quiero un cafe",
+      "original": "quiero",
+      "corrected": "please quisiera",
+      "category": "register",
+      "expected": "suppressed:english-content"
+    },
+    {
+      "name": "german correction wrong charset",
+      "utterance": "quiero un cafe",
+      "original": "quiero",
+      "corrected": "ich möchte",
+      "category": "register",
+      "expected": "suppressed:non-target-charset"
+    },
+    {
+      "name": "french cedilla wrong charset",
+      "utterance": "quiero un cafe",
+      "original": "cafe",
+      "corrected": "ça va",
+      "category": "vocab",
+      "expected": "suppressed:non-target-charset"
+    },
+    {
+      "name": "implausibly long replacement",
+      "utterance": "si quiero",
+      "original": "si",
+      "corrected": "sí claro por supuesto me encantaría muchísimo gracias amable señor mío",
+      "category": "vocab",
+      "expected": "suppressed:length-implausible"
+    },
+    {
+      "name": "accent-only change mislabeled register",
+      "utterance": "quiero un cafe",
+      "original": "cafe",
+      "corrected": "café",
+      "category": "register",
+      "expected": "suppressed:category-accent-only-not-register"
+    },
+    {
+      "name": "accent-only change as vocab is fine",
+      "utterance": "el te esta frio",
+      "original": "te esta",
+      "corrected": "té está",
+      "category": "vocab",
+      "expected": "shown"
+    },
+    {
+      "name": "ene and diacritics accepted in target charset",
+      "utterance": "manana voy a madrid",
+      "original": "manana",
+      "corrected": "mañana",
+      "category": "vocab",
+      "expected": "shown"
+    },
+    {
+      "name": "digits and punctuation tolerated",
+      "utterance": "quiero 2 cafes",
+      "original": "2 cafes",
+      "corrected": "dos cafés",
+      "category": "vocab",
+      "expected": "shown"
+    },
+    {
+      "name": "inverted question marks normalized away",
+      "utterance": "tienes leche de avena",
+      "original": "tienes",
+      "corrected": "¿tiene usted?",
+      "category": "register",
+      "expected": "shown"
+    }
+  ]
+}

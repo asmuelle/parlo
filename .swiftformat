@@ -1,0 +1,10 @@
+# Parlo swiftformat configuration (M0)
+--swiftversion 6.2
+--indent 4
+--maxwidth 130
+--exclude .build,**/.build,DerivedData,Parlo.xcodeproj
+--importgrouping alpha
+--stripunusedargs closure-only
+--self remove
+--wraparguments before-first
+--wrapcollections before-first
