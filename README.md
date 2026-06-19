@@ -2,19 +2,7 @@
 
 > An AI speaking partner for language learners that runs entirely on the phone — truly unlimited conversation roleplay and pronunciation feedback, offline on the commute or abroad, at a quarter of Speak's price.
 
-**Category:** Edge AI / on-device inference (iOS + Android) · **Status:** 🟡 Runner-up — viable with caveats
-
-## Scorecard
-
-| Metric | Score |
-|---|---|
-| Rank (of 9 finalists) | #7 |
-| Combined score | 5.2 |
-| Monetization potential (1-10) | 7 |
-| Feasibility (1-10) | 5 |
-| Edge AI structurally essential | Yes |
-| Skeptic verdict | weakened |
-
+**Category:** Edge AI / on-device inference (iOS + Android) 
 ## Concept
 
 An AI speaking partner for language learners that runs entirely on the phone — truly unlimited conversation roleplay and pronunciation feedback, offline on the commute or abroad, at a quarter of Speak's price.
