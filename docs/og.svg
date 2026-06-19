@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Parlo — your unlimited speaking partner, on-device and offline">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FBF6EE"/>
+      <stop offset="100%" stop-color="#F4E9DB"/>
+    </linearGradient>
+    <linearGradient id="coral" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FF6F4D"/>
+      <stop offset="100%" stop-color="#F0512B"/>
+    </linearGradient>
+    <linearGradient id="ink" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#23303B"/>
+      <stop offset="100%" stop-color="#16222C"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- soft warm blobs -->
+  <circle cx="1050" cy="90" r="240" fill="#FF6F4D" opacity="0.10"/>
+  <circle cx="120" cy="560" r="200" fill="#3A6F66" opacity="0.10"/>
+
+  <!-- decorative voice ribbon -->
+  <g stroke="url(#coral)" stroke-width="6" stroke-linecap="round" fill="none" opacity="0.55">
+    <path d="M70 470 q 40 -70 80 0 t 80 0 t 80 0 t 80 0"/>
+  </g>
+
+  <!-- brand -->
+  <g transform="translate(80,86)">
+    <rect width="56" height="56" rx="16" fill="url(#ink)"/>
+    <path d="M14 17 h28 a6 6 0 0 1 6 6 v12 a6 6 0 0 1 -6 6 h-16 l-9 8 v-8 h-3 a6 6 0 0 1 -6 -6 v-12 a6 6 0 0 1 6 -6 z" fill="#FF6F4D"/>
+    <text x="74" y="38" font-family="Georgia, 'Times New Roman', serif" font-size="38" font-weight="600" fill="#23303B">Parlo</text>
+  </g>
+
+  <!-- headline -->
+  <text x="80" y="270" font-family="Georgia, 'Times New Roman', serif" font-size="78" font-weight="600" fill="#23303B">Speak more.</text>
+  <text x="80" y="356" font-family="Georgia, 'Times New Roman', serif" font-size="78" font-weight="600" font-style="italic" fill="#F0512B">Unlimited.</text>
+  <text x="80" y="430" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="30" fill="#4C5A63">An AI speaking partner that runs on your phone —</text>
+  <text x="80" y="470" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="30" fill="#4C5A63">offline, private, and never metered.</text>
+
+  <!-- proof chip -->
+  <g transform="translate(80,520)">
+    <rect width="430" height="58" rx="29" fill="#23303B"/>
+    <circle cx="36" cy="29" r="9" fill="#FF6F4D"/>
+    <text x="60" y="37" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="22" fill="#FBF6EE">Works in airplane mode — provably.</text>
+  </g>
+
+  <!-- conversation bubbles motif -->
+  <g transform="translate(770,150)">
+    <rect x="0" y="0" width="300" height="120" rx="40" fill="url(#ink)"/>
+    <path d="M40 120 l0 40 l46 -40 z" fill="url(#ink)"/>
+    <text x="40" y="55" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="24" fill="#FBF6EE">¿Listo para</text>
+    <text x="40" y="90" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="24" fill="#FBF6EE">practicar?</text>
+
+    <rect x="120" y="190" width="300" height="120" rx="40" fill="url(#coral)"/>
+    <path d="M380 310 l0 40 l-46 -40 z" fill="url(#coral)"/>
+    <text x="160" y="245" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="24" fill="#FFFFFF">Sí, vamos a</text>
+    <text x="160" y="280" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="24" fill="#FFFFFF">empezar.</text>
+  </g>
+</svg>
