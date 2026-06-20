@@ -104,7 +104,7 @@ struct CorrectionGateUnitTests {
     }
 
     @Test
-    func `German charset accepts umlauts that Spanish rejects`() {
+    func `german charset accepts umlauts that Spanish rejects`() {
         #expect(TargetLanguageHeuristics.usesAllowedCharset("ich möchte", language: .german))
         #expect(!TargetLanguageHeuristics.usesAllowedCharset("ich möchte", language: .spanish))
         #expect(TargetLanguageHeuristics.usesAllowedCharset("garçon", language: .french))

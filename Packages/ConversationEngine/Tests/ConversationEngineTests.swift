@@ -13,7 +13,7 @@ struct ConversationEngineTests {
     }
 
     @Test
-    func `15-turn conversation completes without overflow — M1 acceptance analog`() async throws {
+    func `fifteen-turn conversation completes without overflow — M1 acceptance analog`() async throws {
         // Arrange
         let store = SpyStore()
         let engine = ConversationEngine(
