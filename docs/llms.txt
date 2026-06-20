@@ -1,0 +1,41 @@
+# Parlo
+
+> Speak as much as you want. Unlimited. Parlo is an on-device AI speaking partner for language learners that runs entirely on your phone — truly unlimited conversation practice and pronunciation feedback, offline and private, with nothing metered and nothing sent to the cloud.
+
+## What it is
+
+Parlo is a conversation partner that lives on your phone, so you can practice speaking a new language out loud, again and again, with no meter running and no microphone pointed at the cloud. Speech recognition, the conversation model, and the spoken replies all run on-device — which is why it works in airplane mode and why "unlimited" is something it can actually promise instead of quietly rationing. It is a language-practice tool, not a certified course, exam, or substitute for a human teacher; the on-device model is smaller than large cloud models and can make mistakes.
+
+## Who it's for
+
+- Learners who want unlimited speaking practice without a daily cap or minute counter.
+- People who practice where data dies — on a plane, in a subway, or abroad with no roaming.
+- Shy learners who want private practice without their voice being streamed to a server.
+- Anyone building conversation-fluency and reps, who leans on a teacher or reference for fine nuance.
+
+## Key features
+
+- Roleplay real situations out loud — café, job interview, haggling, small talk, directions — with Parlo playing the other side as long as you want.
+- Gentle corrections: Parlo answers naturally first, then offers a quick, kind note on what would sound more native, so you keep talking instead of stopping to study.
+- Pronunciation feedback (beta): listens to how you say a phrase and shows which syllables landed and which need work, with stress marked. Shipped honestly as beta-grade feedback, not a clinical score.
+- Free daily 2-minute pronunciation warm-up drill — no subscription needed.
+- Everything runs on-device: speech recognition, the conversation model, and spoken replies, usable on a flight, in a tunnel, or where your data plan gave up.
+
+## Pricing
+
+Your first 3 conversations are free; the free daily 2-minute drill stays free on every plan. Prices shown for reference and may change before launch.
+
+- Monthly — $5.99 / month. Unlimited conversation roleplay, pronunciation feedback (beta), fully offline, cancel anytime.
+- Yearly — $39.99 / year (launch price, about $3.33/month). Renews at $49.99/yr. Everything in Monthly, best value for regular practice, all conversation scenes, new languages as they ship. Marked "Best value".
+- Lifetime — $99.99 once. Pay once, keep Parlo forever; everything plus all future on-device features, no subscription ever.
+
+## FAQ highlights
+
+- Does it really work offline? Yes — speech recognition, the conversation model, and spoken replies all run on your device with no cloud round-trip per turn, so airplane mode keeps working.
+- Which languages and phones at launch? iPhone-first, starting with Spanish, French, and German on recent iPhones capable of running the on-device model. More languages and Android support to follow.
+- Is it as smart as a cloud tutor like ChatGPT? No — an on-device model is smaller, so Parlo is a conversation-fluency partner for speaking volume, not a flawless grammar oracle, and can make mistakes on fine nuance.
+- Why not just use a free cloud app? Parlo is for times with no connection or data plan, or when you want unlimited, private practice without a meter.
+
+## Link
+
+- Landing page: https://asmuelle.github.io/parlo/
