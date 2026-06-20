@@ -64,8 +64,13 @@ format:
     @command -v swiftformat >/dev/null 2>&1 || { echo "ERROR: swiftformat not installed (brew install swiftformat)."; exit 1; }
     swiftformat .
 
+# verify formatting (swiftformat --lint); CI gate
+format-check:
+    @command -v swiftformat >/dev/null 2>&1 || { echo "ERROR: swiftformat not installed (brew install swiftformat)."; exit 1; }
+    swiftformat --lint .
+
 # Full pipeline: lint + build + test (what CI runs)
-ci: lint build test
+ci: lint build test format-check
 
 # (internal) First available iPhone simulator, preferring iPhone 16
 [private]
