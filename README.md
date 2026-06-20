@@ -1,5 +1,7 @@
 # Parlo
 
+[![CI](https://github.com/asmuelle/parlo/actions/workflows/ci.yml/badge.svg)](https://github.com/asmuelle/parlo/actions/workflows/ci.yml)
+
 > An AI speaking partner for language learners that runs entirely on the phone — truly unlimited conversation roleplay and pronunciation feedback, offline on the commute or abroad, at a quarter of Speak's price.
 
 **Category:** Edge AI / on-device inference (iOS + Android) 
