@@ -100,7 +100,9 @@ enum TargetLanguageHeuristics {
     static func usesAllowedCharset(_ normalizedText: String, language: LearningLanguage) -> Bool {
         guard let allowed = allowedLetters[language] else { return false }
         for character in normalizedText where character.isLetter {
-            if !allowed.contains(character) { return false }
+            if !allowed.contains(character) {
+                return false
+            }
         }
         return true
     }

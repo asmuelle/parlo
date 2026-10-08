@@ -104,3 +104,20 @@ A capture → on-device inference → store → surface pipeline: mic audio is t
 - [ ] Coverage ≥ 80% on touched logic modules
 - [ ] Conventional commit message; docs (DESIGN.md/TOOLS.md) updated if architecture or commands changed
 - [ ] code-reviewer subagent run on the diff; CRITICAL/HIGH findings fixed
+
+## Formatting and linting
+
+**SwiftFormat owns layout, SwiftLint owns meaning.** Whitespace, wrapping,
+trailing commas and import order are SwiftFormat's; naming, complexity, size and
+correctness are SwiftLint's. Rules where the two overlapped are disabled on the
+SwiftLint side, each with its reason in `.swiftlint.yml` — they produced 13
+warnings that could never be fixed, because `just format-check` enforces exactly
+the output SwiftLint was objecting to.
+
+Test functions are raw identifiers here (74 of them), so `.swiftformat` pins
+`--test-case-name-format raw-identifiers` rather than relying on the default.
+Note that SwiftLint's `identifier_name` still requires them to start lowercase,
+which is why a test reads `german charset accepts…`; set
+`validates_start_with_lowercase: warning` if that ever becomes annoying enough.
+
+`just lint` and `just format-check` must both pass with no output.

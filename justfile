@@ -54,7 +54,7 @@ test:
 # Lint Swift sources with swiftlint (skips gracefully when not installed)
 lint:
     @if command -v swiftlint >/dev/null 2>&1; then \
-        swiftlint; \
+        swiftlint --strict; \
     else \
         echo "NOTICE: swiftlint not installed — skipping lint (brew install swiftlint to enable)."; \
     fi

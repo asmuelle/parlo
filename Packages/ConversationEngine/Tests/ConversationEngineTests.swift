@@ -32,7 +32,9 @@ struct ConversationEngineTests {
 
         // Assert: every turn completed, none dropped
         let completed = outcomes.compactMap { outcome -> CompletedExchange? in
-            if case let .completed(exchange) = outcome { return exchange }
+            if case let .completed(exchange) = outcome {
+                return exchange
+            }
             return nil
         }
         #expect(completed.count == 15)

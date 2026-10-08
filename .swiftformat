@@ -1,4 +1,10 @@
-# Parlo swiftformat configuration (M0)
+# Parlo swiftformat configuration.
+#
+# SwiftFormat owns layout: whitespace, wrapping, commas, import order.
+# SwiftLint owns meaning: naming, complexity, size, correctness.
+# Rules where the two overlap are disabled on the SwiftLint side — see
+# .swiftlint.yml — so that `just lint` and `just format-check` cannot
+# contradict each other.
 --swiftversion 6.2
 --indent 4
 --maxwidth 130
@@ -8,3 +14,10 @@
 --self remove
 --wraparguments before-first
 --wrapcollections before-first
+
+# Both of these are SwiftFormat defaults today, pinned so a future change of
+# default cannot silently churn the tree or re-open the fight with SwiftLint.
+--trailing-commas always
+# Parlo writes its tests as raw identifiers (74 of them). Keep that: switching
+# would rewrite every test name in the repo.
+--test-case-name-format raw-identifiers

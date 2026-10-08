@@ -82,12 +82,16 @@ actor SpyStore: ConversationStoring {
     }
 
     func append(turn: Turn) async throws {
-        if failAppends { throw ConversationStoreError.storageFailure(detail: "synthetic write failure") }
+        if failAppends {
+            throw ConversationStoreError.storageFailure(detail: "synthetic write failure")
+        }
         turns.append(turn)
     }
 
     func append(condensation: CondensationRecord) async throws {
-        if failAppends { throw ConversationStoreError.storageFailure(detail: "synthetic write failure") }
+        if failAppends {
+            throw ConversationStoreError.storageFailure(detail: "synthetic write failure")
+        }
         condensations.append(condensation)
     }
 

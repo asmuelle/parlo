@@ -9,6 +9,21 @@ excluded:
   - Packages/**/.build
   - DerivedData
 
+disabled_rules:
+  # Owned by SwiftFormat, which CI enforces via `just format-check`. Leaving
+  # these on produced 13 warnings that could never be fixed: SwiftFormat writes
+  # the trailing commas and brace placement, then SwiftLint objected to them.
+  - trailing_comma        # swiftformat --trailing-commas always
+  - opening_brace
+  - trailing_whitespace
+  - vertical_whitespace
+  - statement_position
+  - trailing_newline
+  - duplicate_imports
+  # Fires on SwiftLint's own `disable:next` directive when it sits between a
+  # doc comment and the declaration it documents — the only place it can go.
+  - orphaned_doc_comment
+
 line_length:
   warning: 140
   error: 200
