@@ -116,8 +116,13 @@ the output SwiftLint was objecting to.
 
 Test functions are raw identifiers here (74 of them), so `.swiftformat` pins
 `--test-case-name-format raw-identifiers` rather than relying on the default.
-Note that SwiftLint's `identifier_name` still requires them to start lowercase,
-which is why a test reads `german charset accepts…`; set
-`validates_start_with_lowercase: warning` if that ever becomes annoying enough.
+`identifier_name.validates_start_with_lowercase` is **off** so those names can
+read as the sentences they are — `German charset accepts umlauts that Spanish
+rejects`, not `german …`. The cost is that a genuine `let MyThing` in production
+code no longer gets caught; the compiler and review are the backstop.
+
+Note `off`, not `warning`. `just lint` runs `swiftlint --strict`, which promotes
+every warning to an error, so a rule set to `warning` still fails CI — it just
+fails less legibly.
 
 `just lint` and `just format-check` must both pass with no output.
